@@ -1,0 +1,7 @@
+version: "3"
+services:
+  tic-tac-toe:
+    build: .
+    ports:
+      - "3000:3000"
+    entrypoint: npm start
