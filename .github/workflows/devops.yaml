@@ -1,4 +1,4 @@
-name: cii
+name: ci
 
 on:
   push:
@@ -25,4 +25,4 @@ jobs:
         with:
           context: .
           push: true
-          tags: ${{ secrets.DOCKERHUB_USERNAME }}/tic-tac-toe:latest
+          tags: ${{ secrets.DOCKERHUB_USERNAME }}/tictactoe:latest
