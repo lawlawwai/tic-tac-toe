@@ -3,7 +3,7 @@
 ###########
 
 # pull official base image
-FROM node:16.5.0-alpine as builder
+FROM --platform=linux/amd64 node:16.5.0-alpine as builder
 
 # set working directory
 WORKDIR /usr/src/app
@@ -25,7 +25,7 @@ RUN npm run build
 #########
 
 # pull official base image
-FROM nginx:1.19.4-alpine
+FROM --platform=linux/amd64 nginx:1.19.4-alpine
 
 # update nginx conf
 RUN rm -rf /etc/nginx/conf.d
