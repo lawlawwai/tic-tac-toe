@@ -81,19 +81,12 @@ export default function Game() {
   });
 
   return (
-    <div>
-      <h1>Welcome!</h1>
-      <div className="game">
-        <div className="game-board">
-          <Board
-            xIsNext={xIsNext}
-            squares={currentSquares}
-            onPlay={handlePlay}
-          />
-        </div>
-        <div className="game-info">
-          <ol>{moves}</ol>
-        </div>
+    <div className="game">
+      <div className="game-board">
+        <Board xIsNext={xIsNext} squares={currentSquares} onPlay={handlePlay} />
+      </div>
+      <div className="game-info">
+        <ol>{moves}</ol>
       </div>
     </div>
   );
